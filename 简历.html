@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目资源中心</title>
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .card-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body p {
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--dark-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>项目资源中心</h1>
+            <p>所有项目资源文件下载链接</p>
+        </header>
+        
+        <div class="projects-grid">
+            <!-- 项目卡片1 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <h2>犯罪行为预测系统</h2>
+                    <p>多分类模型 · 2024年12月</p>
+                </div>
+                <div class="card-body">
+                    <p>基于机器学习的犯罪行为预测系统，包含完整的数据集、模型代码和文档说明。</p>
+                    <a href="https://pan.baidu.com/s/1O7oC2vkDXufL2qDrON7PQg?pwd=nbi3" class="download-btn" target="_blank">下载资源</a>
+                </div>
+            </div>
+            
+            <!-- 项目卡片2 -->
+            <div class="project-card">
+                <div class="card-header" style="background: #3a86ff;">
+                    <h2>糖尿病预测模型</h2>
+                    <p>逻辑回归 · 2025年1月</p>
+                </div>
+                <div class="card-body">
+                    <p>医疗数据分析项目，包含预处理代码、训练模型和测试数据集。</p>
+                    <a href="https://pan.baidu.com/s/1s0hZ9LwIfT-GfJ38tWhs5g?pwd=dsc9" class="download-btn" style="background: #3a86ff;" target="_blank">下载资源</a>
+                </div>
+            </div>
+            
+            <!-- 项目卡片3 -->
+            <div class="project-card">
+                <div class="card-header" style="background: #7209b7;">
+                    <h2>交通直线检测</h2>
+                    <p>哈弗直线检测 · 2025年5月</p>
+                </div>
+                <div class="card-body">
+                    <p>基于OpenCV的交通标志识别系统，包含优化后的算法实现代码。</p>
+                    <a href="https://pan.baidu.com/s/1BVbtbfFsbDfNi7OMtmvGgA?pwd=vxf2" class="download-btn" style="background: #7209b7;" target="_blank">下载资源</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 项目资源中心 | 所有资源仅供学习参考</p>
+        </footer>
+    </div>
+</body>
+</html>
